@@ -1,1 +1,19 @@
-<p>toolbar works!</p>
+<mat-toolbar color="primary">
+  <span>Image File Upload</span> &nbsp; &nbsp; &nbsp;
+    <div fxShow="true" fxHide.lt-md="true" fxFlex fxLayout>
+    <a routerLinkActive="active" routerLink="/home"    mat-button><span>Home</span></a>
+    <a routerLinkActive="active" routerLink="/"   mat-button><span>About</span></a>
+    <a routerLinkActive="active" routerLink="/" mat-button><span>Contact</span></a>
+  </div>
+
+
+  <span class="example-spacer"></span>
+
+  <div fxShow="true" fxFlex fxLayout>
+    <a routerLinkActive="active" routerLink="/about"   mat-button><span>Sign-In</span></a>
+  </div>
+  <button mat-icon-button class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon">
+    <mat-icon>favorite</mat-icon>
+  </button>
+</mat-toolbar>

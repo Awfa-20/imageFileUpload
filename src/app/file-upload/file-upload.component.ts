@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-file-upload',
+  templateUrl: './file-upload.component.html',
+  styleUrls: ['./file-upload.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class FileUploadComponent implements OnInit {
 
   fileUploadForm!: FormGroup;
   constructor( private fb: FormBuilder) { }
@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
     this.fileUploadForm = this.fb.group({
       'name': [''],
       'image': ['', Validators.required],
-      // 'image2': ['', Validators.required],
+      'imageString': ['', Validators.required],
     })
   }
 

@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-// import { NgxMatFileInputModule } from '@angular-material-components/file-input';
+import { NgxMatFileInputModule } from '@angular-material-components/file-input';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -25,7 +25,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 
 const materials=[
-  // NgxMatFileInputModule,
+  NgxMatFileInputModule,
   MatToolbarModule,
   MatSidenavModule,
   MatButtonModule,
