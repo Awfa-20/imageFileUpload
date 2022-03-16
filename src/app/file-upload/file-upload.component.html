@@ -6,8 +6,8 @@
         <form [formGroup]='fileUploadForm'
           (ngSubmit)="fileUploadForm.valid && onSubmit()">
 
-          <div class="row form-f">
-            <div class="col-md-6">
+          <div class="row form-field">
+            <div class="col-md-4">
               <mat-form-field class="example-full-width" appearance="outline">
                 <mat-label>Name</mat-label>
                 <input matInput [formControl]='fileUploadForm.controls["name"]'
@@ -16,8 +16,8 @@
             </div>
           </div>
 
-          <div class="row form-f">
-            <div class="col-md-6">
+          <div class="row form-field">
+            <div class="col-md-4">
               <mat-form-field class="example-full-width" appearance="outline">
                 <ngx-mat-file-input [formControl]='fileUploadForm.controls["image"]' accept="image/*"
                   color="primary">
@@ -28,16 +28,16 @@
             </div>
           </div>
 
-          <div class="row form-f">
-            <div class="col-md-6">
+          <div class="row form-field">
+            <div class="col-md-4">
               <app-image-uploade
               [formControl]='fileUploadForm.controls["imageUpload"]'
               [label]='"Select Image"'></app-image-uploade>
             </div>
           </div>
 
-          <div class="row form-f">
-            <div class="col-md-6">
+          <div class="row form-field">
+            <div class="col-md-4">
               <div class="buttons">
                 <button mat-raised-button type="submit" color="primary">Save</button>
               </div>

@@ -12,6 +12,7 @@ import { ToolbarComponent } from './layouts/toolbar/toolbar.component';
 import { TestComponent } from './test/test.component';
 import { FileUploadComponent } from './file-upload/file-upload.component';
 import { ImageUploadeComponent } from './_forms/image-uploade/image-uploade.component';
+import { SignInComponent } from './sign-in/sign-in.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ImageUploadeComponent } from './_forms/image-uploade/image-uploade.comp
     ToolbarComponent,
     TestComponent,
     FileUploadComponent,
-    ImageUploadeComponent
+    ImageUploadeComponent,
+    SignInComponent
   ],
   imports: [
     BrowserModule,
