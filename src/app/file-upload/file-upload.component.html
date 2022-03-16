@@ -10,7 +10,7 @@
             <div class="col-md-6">
               <mat-form-field class="example-full-width" appearance="outline">
                 <mat-label>Name</mat-label>
-                <input matInput formControlName="name"
+                <input matInput [formControl]='fileUploadForm.controls["name"]'
                   placeholder="type your name">
               </mat-form-field>
             </div>
@@ -19,7 +19,7 @@
           <div class="row form-f">
             <div class="col-md-6">
               <mat-form-field class="example-full-width" appearance="outline">
-                <ngx-mat-file-input formControlName="image" accept="image/*"
+                <ngx-mat-file-input [formControl]='fileUploadForm.controls["image"]' accept="image/*"
                   color="primary">
                   <mat-icon ngxMatFileInputIcon>image</mat-icon>
                   <mat-hint>Your Image</mat-hint>
@@ -31,7 +31,7 @@
           <div class="row form-f">
             <div class="col-md-6">
               <app-image-uploade
-              [formControl]='fileUploadForm.controls["imageString"]'
+              [formControl]='fileUploadForm.controls["imageUpload"]'
               [label]='"Select Image"'></app-image-uploade>
             </div>
           </div>

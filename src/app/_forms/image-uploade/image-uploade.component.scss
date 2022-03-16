@@ -9,14 +9,20 @@ input {
 }
 
 .img-preview-container {
-  background-color: #f7f7f7;
+  background-color: #dddbdb;
   position: relative;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+// vertical-align: middle;
+//   align-items: center;
+
 
   .img-preview {
     background: center center no-repeat;
     background-size: contain;
-    height: 116px;
-    width: 116px;
+    height: 210px;
+    width: 310px;
 
     &-error {
       display: none;

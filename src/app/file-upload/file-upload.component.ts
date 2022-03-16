@@ -19,7 +19,7 @@ export class FileUploadComponent implements OnInit {
     this.fileUploadForm = this.fb.group({
       'name': [''],
       'image': ['', Validators.required],
-      'imageString': ['', Validators.required],
+      'imageUpload': ['', Validators.required],
     })
   }
 
