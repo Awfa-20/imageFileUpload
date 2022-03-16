@@ -58,15 +58,19 @@
                     <div class="row">
                       <div class="col-md-12">
                         <div class="buttons">
-                          <div *ngIf="isLoading">
-                            <mat-progress-spinner class="example-margin"
-                              [color]="color" [mode]="mode" [value]="value">
-                            </mat-progress-spinner>
-                          </div>
-                          <div *ngIf="!isLoading">
-                            <button mat-raised-button class="example-full-width"
-                              type="submit" color="primary">Sing In</button>
-                          </div>
+                          <button mat-raised-button class="example-full-width"
+                            type="submit" color="primary">
+
+                            <div *ngIf="!isLoading">Sign In</div>
+
+                            <div *ngIf="isLoading" class="center">
+                              <mat-progress-spinner style="margin:0 auto;" [strokeWidth]="5" [diameter]="33" class="example-margin"
+                                [color]="color" [mode]="mode" [value]="value">
+                              </mat-progress-spinner>
+                            </div>
+
+                          </button>
+
 
                         </div>
 
