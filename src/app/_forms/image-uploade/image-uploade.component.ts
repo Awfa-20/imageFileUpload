@@ -22,7 +22,7 @@ export class ImageUploadeComponent implements ControlValueAccessor, OnInit {
   selectedFile = {} as ImageSnippet;
   // SrcImage!: string;
 
-  OnChage!:(ImageSrc:string)=>void;
+  OnChage!:(ImageFile:File)=>void;
 
   constructor(@Self() public ngControl: NgControl) {
     this.ngControl.valueAccessor = this;
@@ -39,7 +39,7 @@ export class ImageUploadeComponent implements ControlValueAccessor, OnInit {
    this.selectedFile.src =Image;
   }
 
-  registerOnChange(onchange:(ImageSrc:string)=>void): void {
+  registerOnChange(onchange:(ImageFile:File)=>void): void {
     this.OnChage = onchange;
 
   }
@@ -55,7 +55,7 @@ export class ImageUploadeComponent implements ControlValueAccessor, OnInit {
 
       this.selectedFile = new ImageSnippet(event.target.result, file);
       this.selectedFile.pending = true;
-      this.OnChage(event.target.result);
+      this.OnChage(this.selectedFile.file);
       this.selectedFile.pending = false;
     });
 
