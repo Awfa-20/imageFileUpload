@@ -1,7 +1,17 @@
-<app-toolbar></app-toolbar>
+<!-- <app-toolbar></app-toolbar> -->
+
+
 <!-- <app-home></app-home> -->
 <!-- <app-file-upload></app-file-upload> -->
 <!-- <app-sign-in></app-sign-in> -->
 
 
-<router-outlet></router-outlet>
+
+
+<div  style="height: 100%;" *ngIf="IsLogin">
+  <router-outlet></router-outlet>
+</div>
+
+<div style="height: 100%;" *ngIf="!IsLogin">
+  <app-sign-in></app-sign-in>
+</div>

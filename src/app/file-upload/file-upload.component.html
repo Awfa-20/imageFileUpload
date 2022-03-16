@@ -21,7 +21,7 @@
               <mat-form-field class="example-full-width" appearance="outline">
                 <ngx-mat-file-input [formControl]='fileUploadForm.controls["image"]' accept="image/*"
                   color="primary">
-                  <mat-icon ngxMatFileInputIcon>image</mat-icon>
+                  <mat-icon mat-prefix ngxMatFileInputIcon>image</mat-icon>
                   <mat-hint>Your Image</mat-hint>
                 </ngx-mat-file-input>
               </mat-form-field>
@@ -39,7 +39,7 @@
           <div class="row form-field">
             <div class="col-md-4">
               <div class="buttons">
-                <button mat-raised-button type="submit" color="primary">Save</button>
+                <button mat-raised-button type="submit" class="example-full-width" color="primary">Save</button>
               </div>
             </div>
           </div>

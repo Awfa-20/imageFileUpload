@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AccountService } from './_services/account.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'fileImageUpload';
+
+  IsLogin :boolean= false;
+
+
+  constructor(private accountService: AccountService) { }
+
+
+  ngOnInit(): void {
+    this.accountService.getCurrentUser();
+     this.accountService.currentUser$.subscribe(user => {
+       this.IsLogin = !!user;
+     });
+  }
 }

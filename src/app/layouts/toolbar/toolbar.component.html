@@ -10,10 +10,10 @@
   <span class="example-spacer"></span>
 
   <div fxShow="true" fxFlex fxLayout>
-    <a routerLinkActive="active" routerLink="/sign-in"   mat-button><span>Sign-In</span></a>
+    <a routerLinkActive="active" (click)="onLogout()"  mat-button><span>Logout</span></a>
   </div>
-  <button mat-icon-button class="example-icon favorite-icon"
-    aria-label="Example icon-button with heart icon">
-    <mat-icon>favorite</mat-icon>
-  </button>
+  <div fxShow="true" fxFlex fxLayout>
+    <a routerLinkActive="active" (click)="onCreate()"  mat-button><span>Sign Up</span></a>
+  </div>
+
 </mat-toolbar>
