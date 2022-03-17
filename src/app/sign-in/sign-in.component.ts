@@ -21,12 +21,7 @@ export class SignInComponent implements OnInit {
   mode: ProgressSpinnerMode = 'indeterminate';
   value = 75;
 
-  constructor(
-    private accountService: AccountService,
-    private fb: FormBuilder,
-    private router: Router,
-    private _snackBar: SnackBarService
-  ) {}
+  constructor( private accountService: AccountService, private fb: FormBuilder ) {}
 
   ngOnInit(): void {
     this.initForm();

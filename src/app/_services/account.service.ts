@@ -6,6 +6,7 @@ import { map } from 'rxjs/operators';
 import { Router } from '@angular/router'
 import { SystemUserDto } from '../_models/systemUserDto ';
 import { LoginDto } from '../_models/loginDto';
+import { SnackBarService } from './snack-bar.service';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +17,7 @@ export class AccountService {
   private currentUserSource = new ReplaySubject<SystemUserDto>(1);
   currentUser$ = this.currentUserSource.asObservable();
 
-  constructor(private http: HttpClient, private router: Router) {
+  constructor(private http: HttpClient, private router: Router, private _snackBar: SnackBarService) {
   }
 
   login(loginDto: LoginDto) {
@@ -29,9 +30,14 @@ export class AccountService {
         if (user) {
           this.setCurrentUser(user);
           this.router.navigateByUrl('/home');
+          this._snackBar.openSnackBar('Login is successed');
+        }else{
+          this._snackBar.openSnackBar('Login is field');
         }
       })
   }
+
+
 
   setCurrentUser(user: SystemUserDto) {
     localStorage.setItem('user', JSON.stringify(user));

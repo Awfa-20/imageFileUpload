@@ -8,24 +8,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class HomeComponent implements OnInit {
 
-  fileUploadForm!: FormGroup;
-  constructor( private fb: FormBuilder) { }
+  constructor() { }
 
-  ngOnInit(): void {
-    this.initForm()
-  }
-
-  initForm(){
-    this.fileUploadForm = this.fb.group({
-      'name': [''],
-      'image': ['', Validators.required],
-      // 'image2': ['', Validators.required],
-    })
-  }
-
-  onSubmit(){
-
-    console.log(this.fileUploadForm.value)
-  }
+  ngOnInit(): void {}
 
 }
